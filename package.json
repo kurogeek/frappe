@@ -1,5 +1,6 @@
 {
   "name": "frappe-framework",
+  "version": "14.0.0",
   "scripts": {
     "build": "node esbuild",
     "production": "node esbuild --production",
