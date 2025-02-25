@@ -32,9 +32,9 @@
           buildPhase = ''
           
           '';
-          installPhase = '''';
+          installPhase = ''touch $out'';
 
-          distPhase = '''';
+          doDist = false;
 
         };
 
