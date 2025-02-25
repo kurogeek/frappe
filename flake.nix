@@ -30,14 +30,16 @@
           src = ./.;
 
           buildInputs = [
-            pkgs.breakpointHook
+            
           ];
 
           nativeBuildInputs = [
+            pkgs.breakpointHook
             pkgs.esbuild
           ];
 
           buildPhase = ''
+            exit 1
             export HOME=$(mktemp -d)
             yarn --offline build
           '';
