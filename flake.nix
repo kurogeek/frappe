@@ -16,13 +16,12 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   };
 
-  outputs = { flake-parts, devshell, process-compose-flake, ... }@inputs:
+  outputs = { flake-parts, devshell, ... }@inputs:
   flake-parts.lib.mkFlake { inherit inputs; }(
     { lib, ... }: {
       systems = [ "x86_64-linux" ];
       imports = [ 
         devshell.flakeModule
-        process-compose-flake.flakeModule
       ];
       perSystem = { pkgs, ... }: let
         frappe-yarn = pkgs.mkYarnPackage {
