@@ -29,8 +29,6 @@
           version = "1.1.1";
           src = ./.;
 
-          packageJSON = ./package.json;
-          yarnLock = ./yarn.lock;
         };
 
       in {
