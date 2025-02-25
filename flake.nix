@@ -30,7 +30,8 @@
           src = ./.;
 
           buildPhase = ''
-          
+            export HOME=$(mktemp -d)
+            yarn --offline build
           '';
           installPhase = ''touch $out'';
 
